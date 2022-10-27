@@ -17,11 +17,11 @@ A Kubeflow pipeline that clones a dummy github repo, process its files (in this 
 9. Create a docker image with appropriate gcloud config and ssh keys (refer to [Dockerfile](Dockerfile), *replace project name inside*).
 10. Install KF pipelines SDK ([doc](https://www.kubeflow.org/docs/components/pipelines/sdk/install-sdk/)).
 11. Write a [Kubeflow pipeline](kf_pipeline.py) to do the following:
- - Create a persistent volume (PVC) to be shared between subsequent jobs.
- - Create shared memory space.
- - On a single container:
-    -- Get a list of all files in the github repo as this container output.
-    -- Spawn as many nodes as the files in the repo and copy the files from PVC to a cloud bucket in parallel.
+    - Create a persistent volume (PVC) to be shared between subsequent jobs.
+    - Create shared memory space.
+    - On a single container:
+        - Get a list of all files in the github repo as this container output.
+        - Spawn as many nodes as the files in the repo and copy the files from PVC to a cloud bucket in parallel.
  - Release the PVC.
 12. Compile the above pipeline with KF DSL compiler into a yaml.
 13. Upload the compiled pipeline.yaml to KF pipelines dashboard and run an experiment.
