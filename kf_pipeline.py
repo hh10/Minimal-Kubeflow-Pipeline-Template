@@ -4,7 +4,7 @@ import kfp
 from kfp import dsl
 from kubernetes.client.models import V1Volume, V1VolumeMount
 
-_IMAGE = "eu.gcr.io/grand-kingdom-352313/test_proj_image2"
+_IMAGE = "eu.gcr.io/grand-kingdom-352313/test_proj_image2"  # change to your project/image path
 _PERSISTENT_VOL_CLAIM_PATH = "/mnt/pvolume"
 
 
